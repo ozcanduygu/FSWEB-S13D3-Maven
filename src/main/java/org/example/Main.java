@@ -16,5 +16,30 @@ public class Main {
         System.out.println("Area: "+wall1.getArea() );
     }
 
+    public static int enBuyukSayiyiBul(int[] numbers){
+        int max = numbers[0];
+
+        for(int i=0; i<numbers.length; i++){
+            if(numbers[i]>max){
+                max= numbers[i];
+            }
+        }
+        return  max;
+    }
+
+    public static int enBuyukIkinciSayi(int[] numbers){
+        int max = numbers[0];
+        int secondMax = numbers[0];
+
+        for(int i=0; i<numbers.length; i++){
+            if(numbers[i]>max){
+                max= numbers[i];
+                secondMax= max;
+            } else if (numbers[i]<max && numbers[i]>secondMax) {
+                secondMax= numbers[i];
+            }
+        }
+        return  secondMax;
+    }
 
 }
